@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конституція Серверу</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #f4f7f6;
+            color: #1e1e1e;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .top-bar {
+            background-color: #2a4d3d;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .top-bar .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ffffff;
+            text-transform: uppercase;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        header {
+            background-color: #2a4d3d;
+            padding: 20px 0;
+            color: #ffffff;
+            font-size: 22px;
+            font-weight: bold;
+            text-transform: uppercase;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 10px;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #3a6b55;
+            color: #ffffff;
+            border: none;
+            padding: 10px 16px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: 0.3s;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        button:hover {
+            background-color: #28533d;
+            transform: scale(1.05);
+        }
+        section {
+    background-color: #ffffff;
+    padding: 15px;
+    margin: 15px auto;
+    max-width: 900px; /* Збільшена максимальна ширина секції */
+    width: 80%; /* Встановлюємо ширину блоку */
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+    word-wrap: break-word; /* Текст буде переноситися по словах */
+    margin-top: 0;
+    overflow: hidden; /* Приховуємо зайвий текст, якщо він не вміщується */
+    word-break: break-word; /* Переносимо довгі слова */
+}
+
+
+
+
+        footer {
+            background-color: #2a4d3d;
+            padding: 10px;
+            color: #ffffff;
+            font-size: 12px;
+            text-align: center;
+            margin-top: auto;
+        }
+        a {
+            color: #a7ffeb;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="logo">UKRAINE RP</div>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-telegram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-tiktok"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+    </div>
+    <header>Конституція Серверу</header>
+    <div class="buttons-container">
+        <button onclick="showSection('main')">Основні положення</button>
+        <button onclick="showSection('owner')">Власник Серверу</button>
+        <button onclick="showSection('law')">Органи законної влади</button>
+        <button onclick="showSection('court')">Суд</button>
+        <button onclick="showSection('rights')">Права та обов'язки</button>
+        <button onclick="showSection('edit')">Зміни та редагування</button>
+    </div>
+    <section id="content">
+        <p>Оберіть розділ для перегляду інформації.</p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Ukraine RP. Усі права захищені.</p>
+    </footer>
+    <script>
+        function showSection(section) {
+            const content = document.getElementById('content');
+            const sections = {
+                'main': '<h2>Основні положення</h2> <p>1. Основною мовою серверу є українська. <br>2. Усі гравці є вільними і рівні у своїй гідності та правах. Права і свободи людини є невідчужуваними та непорушними <br>3. Гравці мають рівні конституційні права і свободи та є рівними перед законом. <br>4. Кожен має право на свободу світогляду і віросповідання. Це право включає свободу сповідувати будь-яку релігію або не сповідувати ніякої. <br>5. Гравці мають право збиратися мирно, без зброї і проводити збори, мітинги, походи і демонстрації. <br>6. Кожен має право володіти, користуватися і розпоряджатися своєю власністю, результатами своєї інтелектуальної, творчої діяльності.</p>',
+                'owner': '<h2>Власник Серверу</h2><p></p>',
+                'law': '<h2>Органи законної влади</h2><p></p>',
+                'court': '<h2>Суд</h2><p></p>',
+                'rights': '<h2>Права та обов’язки</h2><p></p>',
+                'edit': '<h2>Зміни та редагування</h2><p></p>'
+            };
+            content.innerHTML = sections[section];
+        }
+    </script>
+</body>
+</html>
